@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="66px" viewBox="0 0 80 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Page" transform="translate(-660.000000, -2680.000000)" fill="#FF705B">
+            <g id="Group-21" transform="translate(0.000000, 2680.000000)">
+                <path d="M660,32.9411765 L660,65.8823529 L692.941176,65.8823529 L692.941176,32.9411765 L674.117647,32.9411765 C674.117647,22.5469154 682.54664,14.1176471 692.941176,14.1176471 L692.941176,0 C674.74571,0 660,14.7484648 660,32.9411765 Z M740,14.1176471 L740,0 C721.808207,0 707.058824,14.7484648 707.058824,32.9411765 L707.058824,65.8823529 L740,65.8823529 L740,32.9411765 L721.176471,32.9411765 C721.176471,22.5469154 729.605463,14.1176471 740,14.1176471 Z" id="Fill-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>
