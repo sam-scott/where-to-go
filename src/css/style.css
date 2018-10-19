@@ -8,7 +8,7 @@ Organisation: Queensland University of Technology
 
 html,
 body {
-  margin: 0;
+  margin: 1.8rem 0 0 0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -346,17 +346,17 @@ section {
 }
 
 .navigation .left {
-  padding-top: 0.5rem;
+  padding-top: 0.85rem;
 }
 
 .navigation .right a {
   display: inline-block;
-  padding: 1rem 0;
+  padding: 1.3rem 0;
   margin-left: 2rem;
   color: var(--secondary);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: bold;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
 }
@@ -388,6 +388,7 @@ section {
 .opening .cover .gradient,
 .opening .cover {
   height: 30rem;
+  width: 100%;
 }
 
 .opening {
@@ -396,6 +397,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .opening img{
@@ -451,26 +453,29 @@ section {
   display: none;
 }
 
-/* --- icons --- */
+/* --- icons / stats --- */
 
-#home .icons .thin {
+.icons .thin,
+.stats .thin {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.icons .item,
+.stats .item {
+  width: 12rem;
+  text-align: center;
+}
+
+#home .icons .thin,
+.stats .thin {
   border-top: 1px solid rgba(110, 111, 132, 0.3);
   padding: 3rem 0;
 }
 
 #why-us .icons .item {
   margin-bottom: 2rem;
-}
-
-.icons .thin {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.icons .item {
-  width: 12rem;
-  text-align: center;
 }
 
 .icons .item img {
@@ -482,6 +487,19 @@ section {
   color: var(--tertiary);
   font-size: 0.7rem;
   font-weight: 100;
+}
+
+.stats .no{
+  font-family: Avenir;
+  font-size: 5rem;
+  font-weight: bolder;
+  color: var(--light);
+  line-height: 5rem;
+}
+
+.stats .item p{
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
 /* --- columns --- */
@@ -566,16 +584,17 @@ section {
 .testimonial,
 .testimonial .cover {
   height: 20rem;
+  width: 100%;
 }
 
 .testimonial {
-  width: 100%;
   background: var(--secondary);
   margin-top: 4rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .testimonial img.quote {
