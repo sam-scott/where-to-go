@@ -9,6 +9,7 @@ Organisation: Queensland University of Technology
 html,
 body {
   margin: 1.8rem 0 0 0;
+  font-family: Avenir;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -96,6 +97,7 @@ h4 {
   color: var(--light);
   font-size: 1.2rem;
   letter-spacing: 1px;
+  margin: 0.5rem 0;
 }
 
 h5 {
@@ -105,7 +107,7 @@ h5 {
 }
 
 h6 {
-  margin-bottom: 1rem;
+  margin: 0.6rem 0;
   border-radius: 5px;
   font-size: 0.55rem;
   font-weight: bolder;
@@ -129,6 +131,10 @@ a {
   max-width: 30rem;
   margin: 0 auto 3rem;
   text-align: center;
+}
+
+.overview .title {
+  margin: 0 auto;
 }
 
 .divide {
@@ -192,7 +198,7 @@ section {
 .rows .item img,
 .squares .item img,
 .articles .item img {
-  opacity: 0.6;
+  opacity: 0.7;
   transition: all 0.5s ease;
 }
 
@@ -203,6 +209,13 @@ section {
   opacity: 0.2;
 }
 
+.item .details {
+  width: 80%;
+  bottom: 2rem;
+  position: absolute;
+  z-index: 99;
+}
+
 /* --- columns --- */
 
 .columns .item,
@@ -210,7 +223,7 @@ section {
   height: 25rem;
 }
 
-.columns .item{
+.columns .item {
   width: 19rem;
 }
 
@@ -233,10 +246,26 @@ section {
 .rows .item {
   width: 39.4rem;
   margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.rows .product .gradient {
+  background: linear-gradient(transparent 0, var(--secondary) 90%);
+}
+
+.rows .product img {
+  opacity: 1 !important;
 }
 
 .rows .item:hover img {
   opacity: 0.2;
+}
+
+.rows .product .button {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 99;
 }
 
 .rows .item h3 {
@@ -280,11 +309,52 @@ section {
   opacity: 1;
 }
 
-.articles .item .details {
-  width: 80%;
-  bottom: 2rem;
+.pagination {
+  max-width: 12.1rem;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.pagination:before,
+.pagination:after {
+  content: '';
+  height: 0.4rem;
+  width: 0.4rem;
+  top: 0.95rem;
+  border-top: 1px solid var(--secondary);
+  border-right: 1px solid var(--secondary);
+  display: block;
   position: absolute;
-  z-index: 99;
+}
+
+.pagination:before {
+  transform: rotate(45deg);
+  right: 0;
+}
+
+.pagination:after {
+  transform: rotate(-135deg);
+  left: 0;
+}
+
+.pagination .page {
+  display: inline-block;
+  margin: 0 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10px;
+  padding: 0.7rem;
+  background: var(--light);
+  font-weight: 400;
+  color: var(--secondary);
+  line-height: 1;
+  text-align: center;
+}
+
+.pagination .page.active {
+  color: var(--light);
+  background: var(--secondary);
 }
 
 /* --- button --- */
@@ -384,6 +454,12 @@ section {
 
 /* --- opening --- */
 
+.opening.small,
+.opening.small .cover .gradient,
+.opening.small .cover {
+  height: 20rem;
+}
+
 .opening,
 .opening .cover .gradient,
 .opening .cover {
@@ -400,7 +476,7 @@ section {
   overflow: hidden;
 }
 
-.opening img{
+.opening img {
   width: 100vw;
 }
 
@@ -424,6 +500,11 @@ section {
   position: relative;
 }
 
+.search.basic .field {
+  background: var(--light);
+  color: var(--tertiary);
+}
+
 .search .field:after {
   content: '';
   height: 0.25rem;
@@ -435,6 +516,11 @@ section {
   border-right: 1px solid var(--light);
   display: block;
   position: absolute;
+}
+
+.search.basic .field:after {
+  border-top: 1px solid var(--tertiary);
+  border-right: 1px solid var(--tertiary);
 }
 
 .search .field.submit {
@@ -489,15 +575,15 @@ section {
   font-weight: 100;
 }
 
-.stats .no{
+.stats .no {
   font-family: Avenir;
-  font-size: 5rem;
-  font-weight: bolder;
+  font-size: 4rem;
+  font-weight: 700;
   color: var(--light);
   line-height: 5rem;
 }
 
-.stats .item p{
+.stats .item p {
   font-size: 0.8rem;
   letter-spacing: 1px;
 }
@@ -594,7 +680,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .testimonial img.quote {
@@ -657,6 +742,71 @@ section {
   z-index: 99;
 }
 
+/* --- map --- */
+
+.map img {
+  margin-bottom: -5px;
+  padding-top: 10px;
+}
+
+/* --- gallery --- */
+
+.gallery {
+  display: flex;
+  position: relative;
+}
+
+.gallery .third {
+  height: 15rem;
+  display: inline-block;
+}
+
+.gallery:before,
+.gallery:after {
+  content: '';
+  height: 0.8rem;
+  width: 0.8rem;
+  top: 6.5rem;
+  border-top: 1.5px solid var(--light);
+  border-right: 1.5px solid var(--light);
+  display: block;
+  position: absolute;
+}
+
+.gallery:before {
+  left: 2rem;
+  transform: rotate(-135deg);
+}
+
+.gallery:after {
+  right: 2rem;
+  transform: rotate(45deg);
+}
+
+/* --- itinerary --- */
+
+ul.itinerary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.itinerary li {
+  padding-left: 2rem;
+  position: relative;
+}
+
+ul.itinerary li:before {
+  content: '';
+  background: url('../images/marker.svg') no-repeat;
+  background-size: contain;
+  display: block;
+  height: 2rem;
+  width: 1rem;
+  position: absolute;
+  left: 0;
+}
+
 /* --- footer --- */
 
 .footer .wrap {
@@ -667,7 +817,7 @@ section {
 
 .footer .list {
   margin: auto;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
